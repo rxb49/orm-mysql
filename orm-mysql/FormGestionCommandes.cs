@@ -2,15 +2,15 @@
 {
     public partial class FormGestionCommandes : Form
     {
-        private string mode; // Variable pour stocker le mode (Ajout/Modification)
-        private int? idCommande; // Nullable int pour stocker l'ID de la commande en cas de modification
+        private string mode;
+        private int? idCommande;
 
         // Constructeur pour le mode ajout
         public FormGestionCommandes(string mode)
         {
             InitializeComponent();
             this.mode = mode;
-            this.idCommande = null; // Pas d'ID de commande en mode Ajout
+            this.idCommande = null;
         }
 
         // Constructeur pour le mode modification
@@ -40,12 +40,21 @@
         {
             if (mode == "Ajouter")
             {
-                bsGestion.DataSource = Modele.AjoutCommande(
-                    Convert.ToInt32(txt_montant.Text),
-                    dateTimePicker1.Value,
-                    Convert.ToInt32(cbClients.SelectedValue)
-                );
-                MessageBox.Show("Ajout réussi");
+                try
+                {
+                    bsGestion.DataSource = Modele.AjoutCommande(
+                                        Convert.ToInt32(txt_montant.Text),
+                                        dateTimePicker1.Value,
+                                        Convert.ToInt32(cbClients.SelectedValue)
+                                    );
+                    MessageBox.Show("Ajout réussi");
+                }
+                catch
+                {
+                    MessageBox.Show("Erreur lors de l\'ajout");
+
+                }
+
             }
             else if (mode == "Modifier" && idCommande.HasValue)
             {
@@ -60,7 +69,7 @@
                 }
                 catch
                 {
-                    MessageBox.Show("Erreur dans la modification");
+                    MessageBox.Show("Erreur lors de la modification");
 
                 }
 

@@ -103,3 +103,4 @@ P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\obj\Debug\net8.0-windows\orm_mysql.listeCli
 P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\obj\Debug\net8.0-windows\orm_mysql.listePartitions.resources
 P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\obj\Debug\net8.0-windows\orm_mysql.FormGestionCommandes.resources
 P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\obj\Debug\net8.0-windows\orm-mysql.sourcelink.json
+P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\obj\Debug\net8.0-windows\orm_mysql.AjoutPartition.resources

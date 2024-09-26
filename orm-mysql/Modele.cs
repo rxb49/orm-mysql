@@ -130,9 +130,9 @@ namespace orm_mysql
                     monModel.SaveChanges();
 
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    System.Windows.Forms.MessageBox.Show(e.Message);
                     vretour = false;
                 }
             }
