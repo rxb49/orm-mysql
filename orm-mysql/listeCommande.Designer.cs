@@ -39,6 +39,7 @@
             nmMontant = new NumericUpDown();
             btnAjouter = new Button();
             btnModifier = new Button();
+            btnSupprimer = new Button();
             ((System.ComponentModel.ISupportInitialize)bsCommande).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCommande).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsClients2).BeginInit();
@@ -126,11 +127,22 @@
             btnModifier.UseVisualStyleBackColor = true;
             btnModifier.Click += btnModifier_Click;
             // 
+            // btnSupprimer
+            // 
+            btnSupprimer.Location = new Point(660, 361);
+            btnSupprimer.Name = "btnSupprimer";
+            btnSupprimer.Size = new Size(113, 23);
+            btnSupprimer.TabIndex = 9;
+            btnSupprimer.Text = "SUPPRIMER";
+            btnSupprimer.UseVisualStyleBackColor = true;
+            btnSupprimer.Click += btnSupprimer_Click;
+            // 
             // listeCommande
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSupprimer);
             Controls.Add(btnModifier);
             Controls.Add(btnAjouter);
             Controls.Add(nmMontant);
@@ -162,5 +174,6 @@
         private NumericUpDown nmMontant;
         private Button btnAjouter;
         private Button btnModifier;
+        private Button btnSupprimer;
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("orm-mysql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37d1a236be3860350813f3eda745b408eba32aec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5c01fa5faa5884fa5cf4b7cbbeb29a6be261628")]
 [assembly: System.Reflection.AssemblyProductAttribute("orm-mysql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("orm-mysql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace orm_mysql.Entities;
+﻿namespace orm_mysql.Entities;
 
 public partial class Auteur
 {

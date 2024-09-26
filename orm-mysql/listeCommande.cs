@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using System.Data;
 
 namespace orm_mysql
 {
@@ -99,16 +90,27 @@ namespace orm_mysql
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormGestionCommandes FormGestionCommande = new FormGestionCommandes();
-            FormGestionCommande.Show();
+            FormGestionCommandes FormAjoutCommande = new FormGestionCommandes("Ajouter");
+            FormAjoutCommande.Show();
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
             System.Type type = bsCommande.Current.GetType();
-            int idCommande = (int)type.GetProperty("NUMCDE").GetValue(bsCommande.Current, null);
-            FormGestionCommandes FormGestionCommande = new FormGestionCommandes();
-            FormGestionCommande.Show();
+            int idCommande = (int)type.GetProperty("Numcde").GetValue(bsCommande.Current, null);
+            this.Hide();
+            FormGestionCommandes FormModifierCommandes = new FormGestionCommandes("Modifier", idCommande);
+            FormModifierCommandes.Show();
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            System.Type type = bsCommande.Current.GetType();
+            int idCommande = (int)type.GetProperty("Numcde").GetValue(bsCommande.Current, null);
+            Modele.SuppCommande(idCommande);
+            this.Hide();
+            listeCommande listeCommande = new listeCommande();
+            listeCommande.Show();
         }
     }
 }

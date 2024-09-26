@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using orm_mysql.Entities;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace orm_mysql
 
@@ -102,6 +95,58 @@ namespace orm_mysql
             return uneCommande;
         }
 
+        public static bool ModifierCommande(int idCde, int montant, DateTime dateC, int idClient)
+        {
+            Commande maCommande = RecupererCommande(idCde);
+            bool vretour = true;
+            try
+            {
+                maCommande.Montantcde = montant;
+                maCommande.Datecde = dateC.Date;
+                maCommande.Numcli = idClient;
+
+                monModel.SaveChanges();
+
+            }
+            catch
+            {
+                vretour = false;
+                MessageBox.Show("Erreur lors de la modification");
+            }
+
+
+            return vretour;
+        }
+
+        public static bool SuppCommande(int idCommande)
+        {
+            bool vretour = true;
+            if (MessageBox.Show("Etes vous sur de vouloir supprimer la commande :" + idCommande, "Suppression", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                try
+                {
+                    Commande maCommande = RecupererCommande(idCommande);
+                    monModel.Commandes.Remove(maCommande); // correspond au DELETE 
+                    monModel.SaveChanges();
+
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    vretour = false;
+                }
+            }
+
+            return vretour;
+        }
+
+        public static ICollection<Partition> listePartitionsParCommande(int idC)
+        {
+            Commande maCommande = RecupererCommande(idC);
+            ICollection<Partition> part = new List<Partition>();
+            part = maCommande.Numparts;
+            return part;
+        }
     }
 
 }
