@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = orm_mysql
-build_property.ProjectDir = P:\SLAM5\TP1 ORM\orm-mysql\orm-mysql\
+build_property.ProjectDir = C:\Users\Robin\Documents\dev cours\orm-mysql\orm-mysql\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

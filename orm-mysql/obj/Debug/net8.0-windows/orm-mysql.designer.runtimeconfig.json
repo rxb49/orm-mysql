@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\rtijou\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\rtijou\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\Robin\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Robin\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

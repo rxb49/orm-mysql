@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "P:\\SLAM5\\TP1 ORM\\orm-mysql\\orm-mysql\\orm-mysql.csproj": {}
+    "C:\\Users\\Robin\\Documents\\dev cours\\orm-mysql\\orm-mysql\\orm-mysql.csproj": {}
   },
   "projects": {
-    "P:\\SLAM5\\TP1 ORM\\orm-mysql\\orm-mysql\\orm-mysql.csproj": {
+    "C:\\Users\\Robin\\Documents\\dev cours\\orm-mysql\\orm-mysql\\orm-mysql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\SLAM5\\TP1 ORM\\orm-mysql\\orm-mysql\\orm-mysql.csproj",
+        "projectUniqueName": "C:\\Users\\Robin\\Documents\\dev cours\\orm-mysql\\orm-mysql\\orm-mysql.csproj",
         "projectName": "orm-mysql",
-        "projectPath": "P:\\SLAM5\\TP1 ORM\\orm-mysql\\orm-mysql\\orm-mysql.csproj",
-        "packagesPath": "C:\\Users\\rtijou\\.nuget\\packages\\",
-        "outputPath": "P:\\SLAM5\\TP1 ORM\\orm-mysql\\orm-mysql\\obj\\",
+        "projectPath": "C:\\Users\\Robin\\Documents\\dev cours\\orm-mysql\\orm-mysql\\orm-mysql.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Robin\\Documents\\dev cours\\orm-mysql\\orm-mysql\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rtijou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

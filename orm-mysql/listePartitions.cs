@@ -29,18 +29,26 @@ namespace orm_mysql
 
         private void bsStyle2_CurrentChanged(object sender, EventArgs e)
         {
-            // récupération de l’identifiant du client issu de la comboBox : on a NUMCLI en ValueMember de la
-            // combo, donc on peut récupérer la valeur par la propriété SelectedValue
-            int IdStyle = Convert.ToInt32(cbPartitions.SelectedValue);
-            bsStyle2.DataSource = Modele.listePartitionsParStyle(IdStyle).Select(x => new
-            {
-                x.Numpart,
-                x.Libpart,
-                x.Prixpart,
-                x.Numstyle,
-            })
-            .OrderBy(x => x.Numstyle);
-            dgvPartitions.DataSource = bsStyle;
+
+                // Désactiver temporairement l'événement pour éviter la récursion
+                bsStyle2.CurrentChanged -= bsStyle2_CurrentChanged;
+
+                int IdStyle = Convert.ToInt32(cbPartitions.SelectedValue);
+                bsStyle2.DataSource = Modele.listePartitionsParStyle(IdStyle)
+                    .Select(x => new
+                    {
+                        x.Numpart,
+                        x.Libpart,
+                        x.Prixpart,
+                        x.Numstyle,
+                    })
+                    .OrderBy(x => x.Numstyle);
+
+                dgvPartitions.DataSource = bsStyle;
+
+                // Réactiver l'événement après la mise à jour
+                bsStyle2.CurrentChanged += bsStyle2_CurrentChanged;
+            
         }
     }
 }
